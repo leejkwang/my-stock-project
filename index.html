@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>재광님의 5개 언어 융합 대시보드</title>
+    <style>
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; max-width: 800px; }
+        h1 { color: #1a73e8; }
+        button { background-color: #1a73e8; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #1557b0; }
+        #chart-area { margin-top: 20px; display: none; }
+        img { width: 100%; border-radius: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 5개 언어 주식 분석기</h1>
+        <p>파이썬, HTML, CSS, JS, Zsh이 모두 들어간 결과물입니다.</p>
+        <button onclick="toggleChart()">차트 열기/닫기</button>
+        <div id="chart-area">
+            <img src="kospi_web.png" alt="코스피 차트">
+        </div>
+    </div>
+    <script>
+        function toggleChart() {
+            var area = document.getElementById('chart-area');
+            if (area.style.display === 'none') {
+                area.style.display = 'block';
+                alert('자바스크립트가 차트를 불러왔습니다!');
+            } else {
+                area.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
